@@ -9,7 +9,12 @@ import re
 from types import UnicodeType, ListType, TupleType, StringType, IntType, LongType, FloatType, BooleanType
 from string import strip, upper, lower
 
-version_info = { 'version' : '1.01 beta', 'date' : '2013-09-13', 'now' : datetime.datetime.now().strftime('%Y-%m-%d'), 'time' : datetime.datetime.now().strftime('%H:%M'), 'author' : 'ichar' }
+version_info = { 
+    'version' : '1.01 beta', 
+    'date'    : '2013-09-13', 
+    'now'     : datetime.datetime.now().strftime('%Y-%m-%d'), 
+    'time'    : datetime.datetime.now().strftime('%H:%M'), 'author' : 'ichar' 
+}
 version = 'version %(version)s, %(date)s, %(author)s' % version_info
 short_version = 'version %(version)s © DoorHan' % version_info
 date_version = '%(now)s %(time)s' % version_info
@@ -36,7 +41,7 @@ IsDisableOutput = 0
 
 _globals = {}
 
-##  =====================================================================================================================  ##
+##  ================================================================================  ##
 
 class Logger():
     
@@ -208,8 +213,9 @@ if __name__ == "__main__":
 
     if len(argv) > 1 and argv[1].lower() in ('/h', '/help', '-h', 'help', '--help'):
         print '--> DoorHan Inc.'
-        print '--> *JS-Functions Maker* script.'
+        print '--> *JS-Functions Maker* closure script.'
         print '--> '
+        print '--> %s[Python2]' % version
     else:
         name = len(argv) > 1 and argv[1] or 'functions'
 

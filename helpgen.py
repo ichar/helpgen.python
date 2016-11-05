@@ -17,7 +17,13 @@ import xlrd
 from types import UnicodeType, ListType, TupleType, StringType, IntType, LongType, FloatType, BooleanType
 from string import strip, upper, lower
 
-version_info = { 'version' : '2.46 beta', 'date' : '2015-08-28', 'now' : datetime.datetime.now().strftime('%Y-%m-%d'), 'time' : datetime.datetime.now().strftime('%H:%M'), 'author' : 'ichar' }
+version_info = { 
+    'version' : '2.46 beta', 
+    'date'    : '2015-08-28', 
+    'now'     : datetime.datetime.now().strftime('%Y-%m-%d'), 
+    'time'    : datetime.datetime.now().strftime('%H:%M'), 
+    'author'  : 'ichar' 
+}
 version = 'version %(version)s, %(date)s, %(author)s' % version_info
 short_version = 'version %(version)s © DoorHan' % version_info
 date_version = '%(now)s %(time)s' % version_info
@@ -3217,7 +3223,7 @@ if __name__ == "__main__":
         print '--> '
         print '-->   <xls-descriptor file name> without extention, e.g.: product id'
         print '--> '
-        print '--> %s' % version
+        print '--> %s[Python2]' % version
     else:
         for x in argv[1:]:
             if x.startswith('--'):

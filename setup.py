@@ -1,11 +1,16 @@
-# -*- coding: cp1251 -*-
+п»ї# -*- coding: cp1251 -*-
 
 import os
 import sys
 import datetime
 import shutil
 
-version_info = { 'version' : '2.03 beta', 'date' : '2014-09-30', 'now' : datetime.datetime.now().strftime('%Y-%m-%d'), 'time' : datetime.datetime.now().strftime('%H:%M'), 'author' : 'ichar' }
+version_info = { 
+    'version' : '2.03 beta', 
+    'date'    : '2014-09-30', 
+    'now'     : datetime.datetime.now().strftime('%Y-%m-%d'), 
+    'time'    : datetime.datetime.now().strftime('%H:%M'), 'author' : 'ichar' 
+}
 version = 'version %(version)s, %(date)s, %(author)s' % version_info
 short_version = 'version %(version)s © DoorHan' % version_info
 date_version = '%(now)s %(time)s' % version_info
@@ -28,16 +33,16 @@ special_file_list = ( \
     'local-valid-construct.xml',
 )
 
-# Журнал изменений:
+# Р–СѓСЂРЅР°Р» РёР·РјРµРЅРµРЅРёР№:
 # -----------------
-# 2.03: папка общих изображений: <root>\images
-# 2.02: контроль комплектации изделия
-# 2.01: контроль комплектации
+# 2.03: РїР°РїРєР° РѕР±С‰РёС… РёР·РѕР±СЂР°Р¶РµРЅРёР№: <root>\images
+# 2.02: РєРѕРЅС‚СЂРѕР»СЊ РєРѕРјРїР»РµРєС‚Р°С†РёРё РёР·РґРµР»РёСЏ
+# 2.01: РєРѕРЅС‚СЂРѕР»СЊ РєРѕРјРїР»РµРєС‚Р°С†РёРё
 # 2.00: html5 setup
-# 1.12: параметр <modified> сделан необязательным
+# 1.12: РїР°СЂР°РјРµС‚СЂ <modified> СЃРґРµР»Р°РЅ РЅРµРѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рј
 # 1.11: source final slash control
-# 1.10: версия, date
-# 1.09: кодировка файла coding: cp1251
+# 1.10: РІРµСЂСЃРёСЏ, date
+# 1.09: РєРѕРґРёСЂРѕРІРєР° С„Р°Р№Р»Р° coding: cp1251
 
 def chdir(s):
     drive, path = os.path.splitdrive(s)
@@ -96,6 +101,7 @@ def walk(source, destination, modified, model=None, force=None):
                 n += 1
     return n
 
+
 if __name__ == "__main__":
     argv = sys.argv
 
@@ -113,7 +119,7 @@ if __name__ == "__main__":
         print '-->   <DUS> - model name (xxx - for core changes only)'
         print '-->   <force> - Y/N (all files)'
         print '--> '
-        print '--> %s' % version
+        print '--> %s[Python2]' % version
 
     else:
         source = argv[1]
